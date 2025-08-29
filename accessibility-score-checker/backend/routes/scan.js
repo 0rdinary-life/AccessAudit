@@ -10,6 +10,7 @@ router.post('/', async(req, res) => {
         console.log("serving cached")
         return res.json(cached);
     }
+    console.log("test")
     try{
         const result = await crawler.scanPage(url)
         const score = await scoreCalculator.calculateScore(result)
